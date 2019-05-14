@@ -272,7 +272,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">49</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">458</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -401,7 +401,7 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="SDN起源"><a href="#SDN起源" class="headerlink" title="SDN起源"></a>SDN起源</h1><ul>
+        <h1 id="SDN基础知识"><a href="#SDN基础知识" class="headerlink" title="SDN基础知识"></a>SDN基础知识</h1><ul>
 <li>SDN的英文全称是<strong>Software Defined Network</strong></li>
 </ul>
 <a id="more"></a>
@@ -409,10 +409,73 @@ height:50vh;
 <h3 id="传统网络规划与设计特点-10003"><a href="#传统网络规划与设计特点-10003" class="headerlink" title="传统网络规划与设计特点 &#10003;"></a><em>传统网络规划与设计特点</em> &#10003;</h3><blockquote>
 <p>1.预设 2.静态 3.明确 4.稳定</p>
 </blockquote>
+</blockquote>
 <blockquote>
-<p>根据应用需求来设计传统网络</p>
+<h3 id="应用需求-10003"><a href="#应用需求-10003" class="headerlink" title="应用需求 &#10003;"></a><em>应用需求</em> &#10003;</h3><blockquote>
+<p>1.网络架构 2.拓扑 3.IP连通性 4.安全与QoS策略</p>
 </blockquote>
 </blockquote>
+<h3 id="那么新型网络架构、新的网络设计应该如何构建呢？"><a href="#那么新型网络架构、新的网络设计应该如何构建呢？" class="headerlink" title="那么新型网络架构、新的网络设计应该如何构建呢？"></a><font color="#FF0000">那么新型网络架构、新的网络设计应该如何构建呢？</font></h3><ul>
+<li>能够弹性响应上层应用变化的网络可编程</li>
+<li>引入一个集中统一的控制与管理层</li>
+<li>解耦网络设备的平面管理、控制平面与数据平面</li>
+</ul>
+<h3 id="SDN的三层网络架构"><a href="#SDN的三层网络架构" class="headerlink" title="SDN的三层网络架构"></a>SDN的三层网络架构</h3><ul>
+<li>由应用层、控制层、基础设施层构成</li>
+<li>应用层是用户业务系统通过API(北桥)链接控制层SDN控制器其中包含网络服务</li>
+<li>再通过控制数据平面接口(南桥)连接到基础设施层，其中包含网络设备</li>
+</ul>
+<h3 id="新一代网络架构"><a href="#新一代网络架构" class="headerlink" title="新一代网络架构"></a><del>新一代网络架构</del></h3><ul>
+<li>底层网络设备&#8594;解耦&#8594;简单化</li>
+<li><font color="#FFD700">网络的管理&#8594;集中控制器&#8594;全局化</font></li>
+<li><font color="#90E190">网络的运维&#8594;SDN南向接口与协议&#8594;自动化</font>
+
+</li>
+</ul>
+<h3 id="SDN的主流技术架构"><a href="#SDN的主流技术架构" class="headerlink" title="SDN的主流技术架构"></a>SDN的主流技术架构</h3><table>
+<thead>
+<tr>
+<th>ONF定义的基于OpenFlow的架构</th>
+<th>IETF提出的网络架构</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>特点: 1. 转发与控制分离;</td>
+<td>特点： 1.开放网络设备能力；</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. 标准化转发面.</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2. 标准化API.</td>
+<td></td>
+</tr>
+<tr>
+<td>优点： 易于流量调度</td>
+<td>优点： 1.充分利用现有设备； 2.快速实现</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>NICIRA提出的Overlay技术构架</th>
+<th>ETSI提出的NFV技术构架</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>特点: 1.网络边缘软件化</td>
+<td>NFV与SDN技术互补；</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.Overlay技术</td>
+<td>但有本质区别,严格来说不能算是</td>
+</tr>
+</tbody>
+</table>
+<h3 id="数据平面"><a href="#数据平面" class="headerlink" title="数据平面"></a>数据平面</h3><ul>
+<li>若干网元（Network Element）; 包含一个或多个SDN数据路径（Datapath）</li>
+</ul>
 
     </article>
     <!-- license  -->
@@ -421,7 +484,7 @@ height:50vh;
             <p>原文作者：<a href="http://yoursite.com">小骆</a>
             </p><p>原文链接：<a href="http://yoursite.com/2019/05/12/学习SDN（一）/">http://yoursite.com/2019/05/12/学习SDN（一）/</a>
             </p><p>发表日期：<a href="http://yoursite.com/2019/05/12/学习SDN（一）/">May 12th 2019, 6:13:30 pm</a>
-            </p><p>更新日期：<a href="http://yoursite.com/2019/05/12/学习SDN（一）/">May 13th 2019, 12:07:54 am</a>
+            </p><p>更新日期：<a href="http://yoursite.com/2019/05/12/学习SDN（一）/">May 13th 2019, 12:09:37 pm</a>
             </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -429,12 +492,17 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
+                <div class="nextSlogan">Next Post</div>
+                <a href="/2019/05/14/string/" title>
+                    <div class="nextTitle">[Untitled Post]</div>
+                </a>
+            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2019/04/26/周五学习/" title="周五学习">
-                    <div class="prevTitle">周五学习</div>
+                <a href="/2019/05/12/Js基础语法/" title="5/10笔记整理">
+                    <div class="prevTitle">5/10笔记整理</div>
                 </a>
             
         </li>
@@ -564,7 +632,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#SDN起源"><span class="toc-number">1.</span> <span class="toc-text">SDN起源</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#传统网络规划与设计特点-10003"><span class="toc-number">1.0.1.</span> <span class="toc-text">传统网络规划与设计特点 ✓</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#SDN基础知识"><span class="toc-number">1.</span> <span class="toc-text">SDN基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#传统网络规划与设计特点-10003"><span class="toc-number">1.0.1.</span> <span class="toc-text">传统网络规划与设计特点 ✓</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#应用需求-10003"><span class="toc-number">1.0.2.</span> <span class="toc-text">应用需求 ✓</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#那么新型网络架构、新的网络设计应该如何构建呢？"><span class="toc-number">1.0.3.</span> <span class="toc-text">那么新型网络架构、新的网络设计应该如何构建呢？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SDN的三层网络架构"><span class="toc-number">1.0.4.</span> <span class="toc-text">SDN的三层网络架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#新一代网络架构"><span class="toc-number">1.0.5.</span> <span class="toc-text">新一代网络架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SDN的主流技术架构"><span class="toc-number">1.0.6.</span> <span class="toc-text">SDN的主流技术架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据平面"><span class="toc-number">1.0.7.</span> <span class="toc-text">数据平面</span></a></li></ol></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -602,9 +670,31 @@ top:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 3
+        Total : 5
         </div>
         <!-- search  -->
         
@@ -615,12 +705,31 @@ top:50vh;
     
     
     
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href="/2019/05/14/string/">[Untitled Post]</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">05/12</span><a class="archive-post-title" href="/2019/05/12/学习SDN（一）/">学习SDN(一)</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/12</span><a class="archive-post-title" href="/2019/05/12/Js基础语法/">5/10笔记整理</a>
         </li>
     
     
@@ -638,9 +747,11 @@ top:50vh;
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="hexo学习"><span class="iconfont-archer">&#xe606;</span>hexo学习</span>
+        <span class="sidebar-tag-name" data-tags="js学习"><span class="iconfont-archer">&#xe606;</span>js学习</span>
     
         <span class="sidebar-tag-name" data-tags="sdn"><span class="iconfont-archer">&#xe606;</span>sdn</span>
+    
+        <span class="sidebar-tag-name" data-tags="hexo学习"><span class="iconfont-archer">&#xe606;</span>hexo学习</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
@@ -710,7 +821,7 @@ jsonContent:
     
         <script src="/scripts/share.js" async></script>    
      
-    </body>
+    <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
 
 
